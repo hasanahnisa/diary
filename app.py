@@ -8,8 +8,8 @@ from datetime import datetime
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-MONGODB_URI = os.environ.get("mongodb+srv://hasanahnisa:sparta@cluster0.qrsyicc.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME =  os.environ.get("dbsparta")
+MONGODB_URI = os.environ.get("MONGODB_URI")
+DB_NAME =  os.environ.get("DB_NAME")
 
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
